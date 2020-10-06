@@ -1,6 +1,9 @@
 {
-  "name": "alcaeus",
-  "version": "1.0.0-beta.18",
+  "name": "@alexkreidler/alcaeus",
+  "version": "1.0.2",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Hydra Core hypermedia-aware client library",
   "main": "./dist/cjs/index.js",
   "types": "./dist/types/index.d.ts",
@@ -53,13 +56,14 @@
   "dependencies": {
     "@rdf-esm/data-model": "^0.5.3",
     "@rdf-esm/formats-common": "^0.5.3",
-    "@rdfjs/formats-common": "^2.1",
+    "@rdf-esm/sink-map": "^0.5.0",
     "@rdf-esm/term-map": "^0.5.0",
     "@rdf-esm/term-set": "^0.5.0",
-    "@rdf-esm/sink-map": "^0.5.0",
+    "@rdfjs/formats-common": "^2.1",
     "@tpluscode/rdf-ns-builders": "^0.4",
     "@tpluscode/rdfine": "^0.5.5",
     "clownface": "^1",
+    "cross-fetch": "^3.0.6",
     "es6-url-template": "^1.0.3",
     "isomorphic-fetch": "^2.2.1",
     "isomorphic-form-data": "^2.0.0",
@@ -108,8 +112,8 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "core-js": "^2.5.0",
     "eslint": "^7.8.0",
-    "eslint-plugin-import": "^2.22.0",
     "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-standard": "^4.0.1",
