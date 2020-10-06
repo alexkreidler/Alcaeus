@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "CommonJS",
-    "outDir": ".",
+    "outDir": "./dist/cjs",
+    "declarationDir": "./dist/types",
     "moduleResolution": "node",
     "sourceMap": false,
     "emitDecoratorMetadata": true,
@@ -11,7 +12,6 @@
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": false,
     "declaration": true,
-    "declarationDir": ".",
     "declarationMap": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

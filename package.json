@@ -2,21 +2,21 @@
   "name": "alcaeus",
   "version": "1.0.0-beta.18",
   "description": "Hydra Core hypermedia-aware client library",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "module": "index.mjs",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/types/index.d.ts",
+  "module": "./dist/esm/index.mjs",
   "exports": {
     ".": {
-      "require": "./index.js",
-      "import": "./index.mjs"
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.mjs"
     },
     "./web": {
-      "require": "./web.js",
-      "import": "./web.mjs"
+      "require": "./dist/cjs/web.js",
+      "import": "./dist/esm/web.mjs"
     },
     "./node": {
-      "require": "./node.js",
-      "import": "./node.mjs"
+      "require": "./dist/cjs/node.js",
+      "import": "./dist/esm/node.mjs"
     }
   },
   "directories": {
@@ -26,7 +26,7 @@
     "test": "jest",
     "build": "run-s build:esm build:cjs",
     "build:cjs": "tsc",
-    "build:esm": "BABEL_ENV=modules babel src --out-dir . --extensions .ts --out-file-extension .mjs",
+    "build:esm": "BABEL_ENV=modules babel src --out-dir ./dist/esm --extensions .ts --out-file-extension .mjs",
     "build:gitbook": "gitbook install; gitbook build . docs/latest",
     "gitbook": "gitbook serve",
     "lint": "eslint . --ext .ts --quiet",

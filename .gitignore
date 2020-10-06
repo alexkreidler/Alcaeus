@@ -1,9 +1,4 @@
 coverage/
-*.js
-*.mjs
-!.config.js
-!main.js
-*.d.ts
-*.d.ts.map
 node_modules/
 _book/
+dist/
