@@ -6,7 +6,7 @@ import type { ManagesBlockPattern } from './Mixins/ManagesBlock'
 import type { Operation } from './Operation'
 import type { SupportedProperty } from './Mixins/SupportedProperty'
 
-export interface HydraResource<D extends DatasetCore = DatasetCore> extends RdfResource<D>, OperationFinder {
+export interface HydraResource<D extends DatasetCore = DatasetCore> extends RdfResource<D>, OperationFinder, Record<string, any> {
     /**
      * Gets the operations which can be performed on this resource
      */

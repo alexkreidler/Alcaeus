@@ -155,6 +155,7 @@ export class Alcaeus<D extends DatasetIndexed> implements HydraClient<D> {
             this.__apiDocumentations.set(term, resource.representation)
             const apiDocs = resource.representation.root
             if (apiDocs && 'classes' in apiDocs) {
+                // @ts-ignore
                 return apiDocs
             }
         }
