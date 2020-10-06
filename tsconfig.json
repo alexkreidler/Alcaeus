@@ -24,10 +24,9 @@
   },
   "files": [
     "src/index.ts",
-    "src/node.ts",
-    "src/web.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

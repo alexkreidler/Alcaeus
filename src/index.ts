@@ -11,6 +11,10 @@ import * as mixins from './ResourceFactoryDefaults'
 import ResourceStoreImpl from './ResourceStore'
 import { defaultSelectors } from './RootSelectors'
 import type { RootNodeCandidate } from './RootSelectors'
+import formats from '@rdfjs/formats-common'
+import datasetIndexed from 'rdf-dataset-indexed'
+import fetch from 'cross-fetch'
+const parsers = formats.parsers
 
 export type { ResourceIdentifier, ResourceIndexer, ResourceFactory } from '@tpluscode/rdfine'
 export * from './Resources/index'
@@ -55,3 +59,10 @@ export function create <D extends DatasetIndexed = DatasetIndexed>({ dataset, fe
 
     return alcaeus
 }
+
+export const Hydra = create({
+    fetch,
+    Headers,
+    parsers,
+    datasetFactory: datasetIndexed,
+})
